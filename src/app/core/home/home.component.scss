@@ -1,0 +1,27 @@
+:host {
+  //display: flex;
+  .clubs {
+    position: absolute;
+    width: 50%;
+    top: 0;
+    bottom: 0;
+    .name {
+    }
+  }
+
+  .om-content {
+    background-color: dodgerblue;
+
+    .logo {
+      width: 200px;
+    }
+  }
+
+  .monaco-content {
+    background-color: red;
+    left: 50%;
+    .logo {
+      width: 175px;
+    }
+  }
+}
