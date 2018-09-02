@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {DomSanitizer, BrowserModule} from '@angular/platform-browser';
 
 @Component({
   selector: 'app-notfound',
@@ -6,12 +7,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./notfound.component.scss']
 })
 export class NotfoundComponent implements OnInit {
+  backgroundImg: any;
 
-  constructor() { }
+  constructor(private sanitizer: DomSanitizer) {
+    this.backgroundImg = sanitizer.bypassSecurityTrustStyle('url(../assets/images/petit_notfound.jpg) no-repeat center center fixed');
+  }
 
   ngOnInit() {
-    console.log('testNotfs');
-
   }
 
 }

@@ -1,11 +1,27 @@
-.menu {
-  position: relative;
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 0;
   width: 100%;
-  height: 100px;
+  height: 50px;
   z-index: 999;
-  background-color: gray;
-  .title {
-    color:white;
-    text-align: center;
+  background-color: transparent;
+  //border: 1px solid black;
+  .navbar-inner {
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    .back {
+      color: white;
+    }
+    .title {
+      color: white;
+      text-align: center;
+      margin: 0 auto;
+      text-transform: uppercase;
+      font-size: 1.5em;
+    }
   }
 }
