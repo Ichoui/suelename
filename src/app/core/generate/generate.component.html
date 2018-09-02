@@ -9,11 +9,12 @@
         <th class="pays">Pays</th>
         <th class="club">Club</th>
       </tr>
-      <tr *ngFor="let data of chars">
+      <tr *ngFor="let data of chars" id="{{ data.nom }}">
         <th class="nom">{{ data.nom }}</th>
         <th class="prenom">{{ data.prenom }}</th>
         <th class="pays">{{ data.pays }}</th>
         <th class="club">{{ data.club }}</th>
+        <th class="delete" (click)="delete(data.nom)">Del</th>
       </tr>
     </table>
   </div>

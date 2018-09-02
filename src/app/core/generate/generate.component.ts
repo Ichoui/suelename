@@ -22,8 +22,10 @@ export class GenerateComponent implements OnInit {
     })
   }
 
-
   ngOnInit() {
   }
 
+  delete(nom) {
+    this.genService.removeChars(nom);
+  }
 }
