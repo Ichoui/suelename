@@ -8,11 +8,11 @@ import {AngularFireModule} from 'angularfire2';
 import {AngularFireDatabaseModule} from 'angularfire2/database';
 import {firebaseConfig} from '../environments/firebase';
 import {GenerateService} from './providers/generate/generate.service';
-import {AngularFirestore, AngularFirestoreModule} from 'angularfire2/firestore';
+import {AngularFirestoreModule} from 'angularfire2/firestore';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
@@ -24,4 +24,5 @@ import {AngularFirestore, AngularFirestoreModule} from 'angularfire2/firestore';
   providers: [GenerateService],
   bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule {
+}

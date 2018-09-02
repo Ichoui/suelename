@@ -7,16 +7,20 @@ import {HomeComponent} from './home/home.component';
 import {MarseilleComponent} from './marseille/marseille.component';
 import {MonacoComponent} from './monaco/monaco.component';
 import {GenerateComponent} from './generate/generate.component';
+import { GenerateFormComponent } from './forms/generate-form/generate-form.component';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({
   imports: [
     CommonModule,
-    CoreRoutingModule
+    CoreRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   exports: [
     CoreRoutingModule
   ],
-  declarations: [NotfoundComponent, LayoutComponent, HomeComponent, MarseilleComponent, MonacoComponent, GenerateComponent]
+  declarations: [NotfoundComponent, LayoutComponent, HomeComponent, MarseilleComponent, MonacoComponent, GenerateComponent, GenerateFormComponent]
 })
 export class CoreModule {
 }

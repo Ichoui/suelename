@@ -10,13 +10,8 @@ import {GenerateService} from '../../providers/generate/generate.service';
 export class GenerateComponent implements OnInit {
   public background: any;
 
-
   constructor(private sanitizer: DomSanitizer, public genService: GenerateService) {
     this.background = sanitizer.bypassSecurityTrustStyle('url(../assets/images/pitch.png) no-repeat center center fixed');
-
-
-
-
   }
 
   ngOnInit() {

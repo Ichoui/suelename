@@ -9,7 +9,6 @@ export class GenerateService {
   }
 
 
-
   getNames() {
     const db = firebase.firestore();
 
@@ -29,21 +28,21 @@ export class GenerateService {
     const tdClub = document.createElement('td');
 
     tr.setAttribute('id', doc.data().nom);
+    tdNom.setAttribute('class', 'nom');
+    tdPrenom.setAttribute('class', 'prenom');
+    tdPays.setAttribute('class', 'pays');
+    tdClub.setAttribute('class', 'club');
+
     tdNom.textContent = doc.data().nom;
     tdPrenom.textContent = doc.data().prenom;
     tdPays.textContent = doc.data().pays;
     tdClub.textContent = doc.data().club;
 
-
-      // tr.textContent = doc.data().club + ' ' + doc.data().nom + ' ' + doc.data().prenom;
     tr.appendChild(tdNom);
     tr.appendChild(tdPrenom);
     tr.appendChild(tdPays);
     tr.appendChild(tdClub);
     table.appendChild(tr);
-
-    // li.(doc.data().club);
-    // console.log(doc.data().club);
   }
 
 }

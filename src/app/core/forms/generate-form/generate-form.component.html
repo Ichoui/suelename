@@ -1,0 +1,33 @@
+<!--<form formGroup="profileForm">-->
+
+<!--<label>-->
+<!--First Name:-->
+<!--<input type="text" formControlName="nom">-->
+<!--</label>-->
+
+<!--<label>-->
+<!--Last Name:-->
+<!--<input type="text" formControlName="prenom">-->
+<!--</label>-->
+
+<!--<label>-->
+<!--Last Name:-->
+<!--<input type="text" formControlName="pays">-->
+<!--</label>-->
+
+<!--<label>-->
+<!--Last Name:-->
+<!--<input type="text" formControlName="club">-->
+<!--</label>-->
+
+<!--</form>-->
+
+<form [formGroup] = "myForm" (submit)="showData()">
+  <label>
+    Nom :
+    <input type="text" formControlName="nom">
+  </label>
+
+  <input type="submit" value="Ajouter">
+
+</form>
