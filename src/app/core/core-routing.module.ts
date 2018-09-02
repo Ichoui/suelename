@@ -5,6 +5,7 @@ import {LayoutComponent} from './layout/layout.component';
 import {MarseilleComponent} from './marseille/marseille.component';
 import {MonacoComponent} from './monaco/monaco.component';
 import {HomeComponent} from './home/home.component';
+import {GenerateComponent} from './generate/generate.component';
 
 const routes: Routes = [
   {
@@ -27,6 +28,10 @@ const routes: Routes = [
       {
         path: 'monaco',
         component: MonacoComponent
+      },
+      {
+        path: 'generate',
+        component: GenerateComponent
       }
     ]
   },

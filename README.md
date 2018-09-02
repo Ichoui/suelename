@@ -20,7 +20,7 @@ A. `firebase login` : si nécessaire de se connecter.<br>
 B. `ng build --prod`<br>
 C. `firebase init` avec le hosting et database, <br>
 
-<ul><li>replace public par <b>dist/maple</b></li>
+<ul><li>replace public par <b>dist/</b></li>
 <li>configure as a single page : <b>YES</b> (Important : permet la redirection vers notfound)</li>
 <li>Overwrite index.html : <b>NO</b> (On conserve l'index généré par angular)</li>
 </ul>

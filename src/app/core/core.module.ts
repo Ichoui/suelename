@@ -6,6 +6,7 @@ import { LayoutComponent } from './layout/layout.component';
 import { HomeComponent } from './home/home.component';
 import { MarseilleComponent } from './marseille/marseille.component';
 import { MonacoComponent } from './monaco/monaco.component';
+import { GenerateComponent } from './generate/generate.component';
 
 @NgModule({
   imports: [
@@ -15,7 +16,7 @@ import { MonacoComponent } from './monaco/monaco.component';
   exports: [
     CoreRoutingModule
   ],
-  declarations: [NotfoundComponent, LayoutComponent, HomeComponent, MarseilleComponent, MonacoComponent]
+  declarations: [NotfoundComponent, LayoutComponent, HomeComponent, MarseilleComponent, MonacoComponent, GenerateComponent]
 })
 export class CoreModule {
 }

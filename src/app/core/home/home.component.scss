@@ -20,8 +20,6 @@
 
   .om-content {
     background:  linear-gradient(to bottom,#043e63 0,#43b3d8 100%) ;
-
-
     .logo {
       width: 230px;
     }
@@ -33,5 +31,18 @@
     .logo {
       width: 200px;
     }
+  }
+}
+
+.generate {
+  position: sticky;
+  color: white;
+  text-align: center;
+  margin: 6vh auto 0;
+  background:linear-gradient(to bottom, gray, 50%, lightgrey);
+  width: 150px;
+  padding: 5px;
+  &:hover {
+    cursor:pointer;
   }
 }
