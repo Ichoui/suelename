@@ -18,14 +18,12 @@ export class GenerateComponent implements OnInit {
     this.background = sanitizer.bypassSecurityTrustStyle('url(../assets/images/pitch.png) no-repeat center center fixed');
 
     this.genService.getChars().subscribe(char => {
-      console.log(char);
       this.chars = char;
     })
   }
 
 
   ngOnInit() {
-    this.genService.getNames();
   }
 
 }
