@@ -1,12 +1,19 @@
 <div [style.background]="background" class="pitch">
   <div class="offset">
     <app-generate-form></app-generate-form>
+
     <table id="list" class="text-center table">
       <tr>
         <th class="nom">Nom</th>
         <th class="prenom">Prenom</th>
         <th class="pays">Pays</th>
         <th class="club">Club</th>
+      </tr>
+      <tr *ngFor="let data of chars">
+        <th class="nom">{{ data.nom }}</th>
+        <th class="prenom">{{ data.prenom }}</th>
+        <th class="pays">{{ data.pays }}</th>
+        <th class="club">{{ data.club }}</th>
       </tr>
     </table>
   </div>

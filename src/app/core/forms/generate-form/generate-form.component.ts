@@ -17,8 +17,6 @@ export class GenerateFormComponent implements OnInit {
 
   ngOnInit() {
     this.form();
-    console.log(this.required);
-
   }
 
   form() {
