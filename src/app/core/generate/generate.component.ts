@@ -10,14 +10,14 @@ import {Generate} from '../../providers/generate/generate';
 })
 export class GenerateComponent implements OnInit {
   public background: any;
-  // public gen: Generate;
+  public gen: Generate;
 
   constructor(private sanitizer: DomSanitizer, public genService: GenerateService) {
     this.background = sanitizer.bypassSecurityTrustStyle('url(../assets/images/pitch.png) no-repeat center center fixed');
-    // this.genService.getPseudos().subscribe(e => {
-    //   this.gen = e;
-    //   console.log(e);
-    // });
+    this.genService.getPseudos().subscribe(e => {
+      this.gen = e;
+      console.log(e);
+    });
 
   }
 
