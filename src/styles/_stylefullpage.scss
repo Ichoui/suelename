@@ -27,15 +27,15 @@ a {
 }
 
 .dno {
-  display:none;
+  display:none !important;
 }
 
 .dbl {
-  display:block;
+  display:block !important;;
 }
 
 .df {
-  display:flex;
+  display:flex !important;;
 }
 
 .offset {

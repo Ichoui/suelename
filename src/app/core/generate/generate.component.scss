@@ -4,7 +4,12 @@
 }
 
 .del {
+  width: 100px;
   &:hover {
-    cursor:pointer;
+    cursor: pointer;
   }
+}
+
+.del-bis {
+  width: 100px;
 }

@@ -14,7 +14,10 @@
         <th class="prenom">{{ data.prenom }}</th>
         <th class="pays">{{ data.pays }}</th>
         <th class="club">{{ data.club }}</th>
-        <th class="delete" (click)="delete(data.nom)">Del</th>
+        <th id="before-{{data.nom}}" class="del" (click)="beforeDel(data.nom)">Del</th>
+        <th id="yes-{{data.nom}}" class="del-bis dno">
+          <span (click)="delete(data.nom)">Yes</span> / <span (click)="cancel(data.nom)">No</span>
+        </th>
       </tr>
     </table>
   </div>

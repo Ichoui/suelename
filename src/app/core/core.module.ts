@@ -9,13 +9,15 @@ import {MonacoComponent} from './monaco/monaco.component';
 import {GenerateComponent} from './generate/generate.component';
 import { GenerateFormComponent } from './forms/generate-form/generate-form.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {SharedModule} from '../shared/shared.module';
 
 @NgModule({
   imports: [
     CommonModule,
     CoreRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    SharedModule.forRoot()
   ],
   exports: [
     CoreRoutingModule

@@ -19,13 +19,31 @@ export class GenerateComponent implements OnInit {
 
     this.genService.getChars().subscribe(char => {
       this.chars = char;
-    })
+    });
   }
 
   ngOnInit() {
   }
 
+  beforeDel(data) {
+    const before = document.getElementById('before-'+data);
+    const yes = document.getElementById('yes-'+data);
+    before.classList.add('dno');
+    yes.classList.remove('dno');
+  }
+
   delete(nom) {
     this.genService.removeChars(nom);
+  }
+
+  cancel(data) {
+    const before = document.getElementById('before-'+data);
+    const yes = document.getElementById('yes-'+data);
+    before.classList.remove('dno');
+    yes.classList.add('dno');
+  }
+
+  update(nom) {
+    this.genService.updateChars(nom);
   }
 }
