@@ -1,9 +1,19 @@
 <div [style.background]="background" class="pitch">
   <div class="offset">
     <form action=""></form>
-    <div class="liste" *ngFor="let data of gen | keyvalue">
-      {{ data.key }}
-      {{ data.value }}
-    </div>
+    <!--<div *ngFor="let ab of nb">-->
+      <!--<div class="liste" *ngFor="let data of gen | keyvalue">-->
+        <!--{{ data.key }}-->
+        <!--{{ data.value }}-->
+      <!--</div>-->
+    <!--</div>-->
+    <table id="list">
+      <tr>
+        <th>Nom</th>
+        <th>Prenom</th>
+        <th>Pays</th>
+        <th>Club</th>
+      </tr>
+    </table>
   </div>
 </div>
