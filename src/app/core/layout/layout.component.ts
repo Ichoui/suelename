@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-layout',
@@ -8,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 export class LayoutComponent implements OnInit {
   title = 'Suelename.com';
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit() {
+  }
+
+  back() {
+    window.history.go(-1);
   }
 
 }
