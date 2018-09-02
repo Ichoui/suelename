@@ -38,7 +38,7 @@ export class GenerateFormComponent implements OnInit {
   }
 
   showData() {
-    event.preventDefault();
+    // event.preventDefault();
     const fireCollec: AngularFirestoreDocument<any> = this.afs.collection(`suelename/`).doc(`${this.myForm.value.nom}`);
     // console.log(this.myForm.value.club);
     const data: FutureChars = {
@@ -47,6 +47,16 @@ export class GenerateFormComponent implements OnInit {
       pays: this.myForm.value.nom,
       club: this.myForm.value.nom
     };
+    this.resetFormValues();
     return fireCollec.set(data, {merge: true});
+  }
+
+  resetFormValues() {
+    this.myForm.setValue({
+      nom: '',
+      prenom: '',
+      pays: '',
+      club: ''
+    });
   }
 }

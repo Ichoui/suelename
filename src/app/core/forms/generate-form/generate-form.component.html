@@ -1,27 +1,3 @@
-<!--<form formGroup="profileForm">-->
-
-<!--<label>-->
-<!--First Name:-->
-<!--<input type="text" formControlName="nom">-->
-<!--</label>-->
-
-<!--<label>-->
-<!--Last Name:-->
-<!--<input type="text" formControlName="prenom">-->
-<!--</label>-->
-
-<!--<label>-->
-<!--Last Name:-->
-<!--<input type="text" formControlName="pays">-->
-<!--</label>-->
-
-<!--<label>-->
-<!--Last Name:-->
-<!--<input type="text" formControlName="club">-->
-<!--</label>-->
-
-<!--</form>-->
-
 <form [formGroup]="myForm" (submit)="showData()">
   <label>
     Nom :
@@ -40,7 +16,7 @@
 
   <label>
     Club :
-    <input type="text" formControlName="club" required>
+    <input type="text" formControlName="club">
   </label>
 
   <input type="submit" value="Ajouter">
