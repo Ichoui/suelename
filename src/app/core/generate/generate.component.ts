@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {DomSanitizer} from '@angular/platform-browser';
 import {GenerateService} from '../../providers/generate/generate.service';
-import {FutureChars} from '../forms/generate-form/futureChars';
+import {Chars} from '../forms/generate-form/chars';
 
 @Component({
   selector: 'app-generate',
@@ -11,7 +11,7 @@ import {FutureChars} from '../forms/generate-form/futureChars';
 export class GenerateComponent implements OnInit {
 
   public background: any;
-  chars: FutureChars[];
+  chars: Chars[];
 
 
   constructor(private sanitizer: DomSanitizer, public genService: GenerateService) {

@@ -1,4 +1,4 @@
-export interface FutureChars {
+export interface Chars {
   nom: string;
   prenom: string;
   pays: string;

@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
-import {FutureChars} from './futureChars';
+import {Chars} from './chars';
 import {AngularFirestore, AngularFirestoreDocument} from 'angularfire2/firestore';
 
 @Component({
@@ -42,7 +42,7 @@ export class GenerateFormComponent implements OnInit {
 
   showData() {
     const fireCollec: AngularFirestoreDocument<any> = this.afs.collection(`suelename/`).doc(`${this.myForm.value.nom}`);
-    const data: FutureChars = {
+    const data: Chars = {
       nom: this.myForm.value.nom,
       prenom: this.myForm.value.prenom,
       pays: this.myForm.value.pays,
