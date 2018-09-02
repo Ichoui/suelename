@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {FormBuilder, FormGroup} from '@angular/forms';
+import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {FutureChars} from './futureChars';
 import {AngularFirestore, AngularFirestoreDocument} from 'angularfire2/firestore';
 
@@ -10,13 +10,6 @@ import {AngularFirestore, AngularFirestoreDocument} from 'angularfire2/firestore
 })
 export class GenerateFormComponent implements OnInit {
 
-  // suelename = new FormGroup({
-  //   nom: new FormControl(''),
-  //   prenom: new FormControl(''),
-  //   club: new FormControl(''),
-  //   pays: new FormControl('')
-  // });
-
   myForm: FormGroup;
 
   constructor(private fb: FormBuilder, public afs: AngularFirestore) {
@@ -24,28 +17,39 @@ export class GenerateFormComponent implements OnInit {
 
   ngOnInit() {
     this.form();
+    console.log(this.required)
+
   }
 
   form() {
     this.myForm = this.fb.group({
-      nom: [''],
-      prenom: [''],
-      pays: [''],
+      nom: ['', Validators.required],
+      prenom: ['', Validators.required],
+      pays: ['', Validators.required],
       club: ['']
     });
-
     // this.myForm.valueChanges.subscribe(console.log);
   }
 
+  required: boolean;
+
+  verifyData() {
+    if (this.myForm.controls.nom.invalid || this.myForm.controls.prenom.invalid || this.myForm.controls.pays.invalid) {
+      this.required = false;
+    } else {
+      this.required = true;
+      this.showData();
+    }
+    console.log(this.required)
+  }
+
   showData() {
-    // event.preventDefault();
     const fireCollec: AngularFirestoreDocument<any> = this.afs.collection(`suelename/`).doc(`${this.myForm.value.nom}`);
-    // console.log(this.myForm.value.club);
     const data: FutureChars = {
       nom: this.myForm.value.nom,
-      prenom: this.myForm.value.nom,
-      pays: this.myForm.value.nom,
-      club: this.myForm.value.nom
+      prenom: this.myForm.value.prenom,
+      pays: this.myForm.value.pays,
+      club: this.myForm.value.club
     };
     this.resetFormValues();
     return fireCollec.set(data, {merge: true});

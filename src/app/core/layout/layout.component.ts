@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-layout',
@@ -8,7 +9,7 @@ import {Component, OnInit} from '@angular/core';
 export class LayoutComponent implements OnInit {
   title = 'Suelename.com';
 
-  constructor() {
+  constructor(private router: Router) {
   }
 
   ngOnInit() {
@@ -16,6 +17,10 @@ export class LayoutComponent implements OnInit {
 
   back() {
     window.history.go(-1);
+  }
+
+  home() {
+    this.router.navigate(['/home']);
   }
 
 }
