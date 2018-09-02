@@ -22,10 +22,25 @@
 
 <!--</form>-->
 
-<form [formGroup] = "myForm" (submit)="showData()">
+<form [formGroup]="myForm" (submit)="showData()">
   <label>
     Nom :
-    <input type="text" formControlName="nom">
+    <input type="text" formControlName="nom" required>
+  </label>
+
+  <label>
+    Prénom :
+    <input type="text" formControlName="prenom" required>
+  </label>
+
+  <label>
+    Pays :
+    <input type="text" formControlName="pays" required>
+  </label>
+
+  <label>
+    Club :
+    <input type="text" formControlName="club" required>
   </label>
 
   <input type="submit" value="Ajouter">

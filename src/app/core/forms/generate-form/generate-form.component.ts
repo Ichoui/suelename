@@ -1,5 +1,7 @@
 import {Component, OnInit} from '@angular/core';
-import {FormBuilder, FormsModule, FormGroup, Validators} from '@angular/forms';
+import {FormBuilder, FormGroup} from '@angular/forms';
+import {FutureChars} from './futureChars';
+import {AngularFirestore, AngularFirestoreDocument} from 'angularfire2/firestore';
 
 @Component({
   selector: 'app-generate-form',
@@ -17,7 +19,7 @@ export class GenerateFormComponent implements OnInit {
 
   myForm: FormGroup;
 
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: FormBuilder, public afs: AngularFirestore) {
   }
 
   ngOnInit() {
@@ -26,19 +28,25 @@ export class GenerateFormComponent implements OnInit {
 
   form() {
     this.myForm = this.fb.group({
-      nom: ['', Validators.required]
-      // prenom: '',
-      // pays: '',
-      // club: ''
+      nom: [''],
+      prenom: [''],
+      pays: [''],
+      club: ['']
     });
 
-    this.myForm.valueChanges.subscribe(console.log);
+    // this.myForm.valueChanges.subscribe(console.log);
   }
 
   showData() {
     event.preventDefault();
-
-    console.log(this.myForm.value);
+    const fireCollec: AngularFirestoreDocument<any> = this.afs.collection(`suelename/`).doc(`${this.myForm.value.nom}`);
+    // console.log(this.myForm.value.club);
+    const data: FutureChars = {
+      nom: this.myForm.value.nom,
+      prenom: this.myForm.value.nom,
+      pays: this.myForm.value.nom,
+      club: this.myForm.value.nom
+    };
+    return fireCollec.set(data, {merge: true});
   }
-
 }
