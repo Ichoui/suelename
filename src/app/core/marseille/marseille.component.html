@@ -1,3 +1,8 @@
-<p>
-  marseille works!
-</p>
+<div [style.background]="background" class="marseille ">
+  <div class="list-players offset">
+    <div class="card-player" *ngFor="let joueur of player">
+      <img src="{{joueur.photo}}" alt="">
+      <div class="identity">{{joueur.prenom}} <span>{{ joueur.nom }}</span></div>
+    </div>
+  </div>
+</div>
