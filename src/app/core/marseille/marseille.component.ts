@@ -25,7 +25,16 @@ export class MarseilleComponent implements OnInit {
   }
 
   showPlayer(joueur) {
-    this.playerShowed = joueur;
+    const block_fix = document.getElementById('block_fix');
+
+    if (this.playerShowed == joueur) {
+      block_fix.classList.add('dno');
+      this.playerShowed = [];
+      console.log(this.playerShowed);
+    } else {
+      this.playerShowed = joueur;
+      block_fix.classList.remove('dno');
+    }
   }
 
 }

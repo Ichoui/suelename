@@ -75,7 +75,4 @@ export class MonacoComponent implements OnInit {
     }
   }
 
-  hasClass(element, classe) {
-    return (' ' + element.className + ' ').indexOf(' ' + classe + ' ') > -1;
-  }
 }
