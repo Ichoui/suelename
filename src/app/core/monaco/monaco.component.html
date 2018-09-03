@@ -1,4 +1,5 @@
 <div [style.background]="background" class="clubs monaco ">
+
   <div class="list-players offset">
     <div id="id-{{joueur.nom}}" class="card-player" *ngFor="let joueur of player" (click)="showPlayer(joueur)">
       <img src="{{joueur.photo}}" alt="">
@@ -6,7 +7,15 @@
     </div>
   </div>
 
-  <div id="test">
-
+  <div id="block_fix">
+    <div class="player-showed" *ngIf="playerShowed | keyvalue">
+      <img src="{{ playerShowed.photo}}" alt="{{playerShowed.nom}}" style="width:75px;">
+      <div> Nom : {{ playerShowed.nom }}</div>
+      <div>Prénom : {{ playerShowed.prenom }}</div>
+      <div>Poste : {{ playerShowed.poste }}</div>
+      <div> Numéro : {{ playerShowed.numero }}</div>
+      <div> Biographie : {{ playerShowed.bio }}</div>
+    </div>
   </div>
+
 </div>

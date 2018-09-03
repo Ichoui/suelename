@@ -11,6 +11,7 @@ import {PlayerService} from '../../providers/player/player.service';
 export class MarseilleComponent implements OnInit {
   background: any;
   player: Player[];
+  playerShowed: Player[];
 
   constructor(private sanitizer: DomSanitizer, private players: PlayerService) {
     this.background = sanitizer.bypassSecurityTrustStyle('url(../assets/images/marseille/marseille_bg.png) no-repeat center center fixed');
@@ -21,6 +22,10 @@ export class MarseilleComponent implements OnInit {
   }
 
   ngOnInit() {
+  }
+
+  showPlayer(joueur) {
+    this.playerShowed = joueur;
   }
 
 }

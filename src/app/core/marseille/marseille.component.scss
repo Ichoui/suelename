@@ -26,4 +26,16 @@
       }
     }
   }
+
+
+  #block_fix {
+    position: absolute;
+    color: white;
+    transform: translate(-50%);
+    left: 50%;
+    .player-showed {
+      text-align: center;
+      background-color: rgba(15, 15, 15, .3);
+    }
+  }
 }
