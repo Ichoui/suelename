@@ -25,4 +25,15 @@ export class MonacoComponent implements OnInit {
   ngOnInit() {
   }
 
+  showPlayer(joueur) {
+    const player = document.getElementById(joueur.nom);
+
+    const test = document.getElementById('test');
+    const div = document.createElement('div');
+
+    div.textContent = joueur.nom + '  ' + joueur.prenom;
+    test.appendChild(div);
+   // console.log(player);
+  }
+
 }
